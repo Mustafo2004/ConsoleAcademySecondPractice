@@ -1,9 +1,11 @@
-import AddingCourses from "./Admin_Components/AddingCourses/AddingCourses"
+// import AddingCourses from "./Admin_Components/AddingCourses/AddingCourses"
+import AddingCoursesTest from "./Admin_Components/AddingCoursesTest/AddingCoursesTest"
 
 const AddminPage = () => {
     return (
         <div>
-            <AddingCourses />
+            {/* <AddingCourses /> */}
+            <AddingCoursesTest />
         </div>
     )
 }

@@ -9,8 +9,7 @@ import usePostData from "../../../Hooks/Post";
 import AdvantagesCourse from "../AdvantagesCourse/AdvantagesCourse";
 import AdvantagesCourseRU from "../AdvantagesCourseRU/AdvantagesCourseRU";
 
-const AddingCourses = () => {
-    // State to handle English and Russian data separately
+const AddingCoursesTest = () => {
     const [coursesEn, setCoursesEn] = useState({
         coursesName: "",
         coursesInfo: "",
@@ -40,23 +39,29 @@ const AddingCourses = () => {
         advantages_2: "",
         advantages_3: "",
     });
-    // !
 
-
-
-
-
-
-    // !
-    
     const [courseInfo, setCourseInfo] = useState("");
     const [courseInfoRu, setCourseInfoRu] = useState("");
     const [file, setFile] = useState(null);
+
+    // State to store the array of courses
+    const [courses, setCourses] = useState([]);
 
     const { postData, response, loading, error } = usePostData("http://127.0.0.1:2442/course/add");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const newCourse = {
+            coursesEn,
+            coursesRu,
+            courseInfo,
+            courseInfoRu,
+            file,
+        };
+
+        // Add the new course to the array
+        setCourses([...courses, newCourse]);
 
         const formData = new FormData();
         formData.append("coursesEn", JSON.stringify(coursesEn));
@@ -65,7 +70,7 @@ const AddingCourses = () => {
         formData.append("courseInfoRu", courseInfoRu);
         if (file) formData.append("file", file);
 
-        await postData(formData);
+        await courses(formData);
     };
 
     const handleChange = (e) => {
@@ -91,7 +96,6 @@ const AddingCourses = () => {
             <Title>{"Add course"}</Title>
             <SubTitle>{"Main info"}</SubTitle>
             <AddingFile onFileChange={handleFileChange} />
-
             <form onSubmit={handleSubmit} className="flex items-center justify-center flex-col gap-5">
                 <div className="flex items-center justify-center gap-11">
                     <div className="w-[500px] flex items-center justify-center flex-col">
@@ -123,6 +127,7 @@ const AddingCourses = () => {
                         onChange={handleChange}
                     />
                 </div>
+
                 <div className="flex items-center justify-center flex-col gap-3">
                     <SubTitle>{"Advantages of the course"}</SubTitle>
                     <div className="flex items-center justify-center gap-8">
@@ -137,15 +142,38 @@ const AddingCourses = () => {
                 {response && <p>Course added successfully!</p>}
                 {error && <p>{error}</p>}
             </form>
-            <div>
-                {postData.map((item) => {
-                    return (
-                        <p key={item.id}>{item}</p>
-                    )
-                })}
+
+
+            <div className="mt-5">
+                <h3>Submitted Courses</h3>
+                <ul>
+                    {courses.map((course, index) => (
+                        <li key={index} className="mb-4">
+                            <h4>English Course Data</h4>
+                            <ul>
+                                {Object.entries(course.coursesEn).map(([key, value]) => (
+                                    <li key={key}>
+                                        <strong>{key}:</strong> {value}
+                                    </li>
+                                ))}
+                            </ul>
+                            <h4>Russian Course Data</h4>
+                            <ul>
+                                {Object.entries(course.coursesRu).map(([key, value]) => (
+                                    <li key={key}>
+                                        <strong>{key}:</strong> {value}
+                                    </li>
+                                ))}
+                            </ul>
+                            <p><strong>Additional Info:</strong> {course.courseInfo}</p>
+                            <p><strong>Дополнительная информация:</strong> {course.courseInfoRu}</p>
+                            {course.file && <p><strong>File:</strong> {course.file.name}</p>}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     );
 };
 
-export default AddingCourses;
+export default AddingCoursesTest;
