@@ -41,26 +41,12 @@ const AddingCourses = () => {
         advantages_3: "",
     });
     // !
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Cookie", "UserLoggedIn=66e93d50fb240fc138ee4e42");
 
-    const raw = JSON.stringify({
-        "phone": "+992987654321",
-        "password": "1234"
-    });
 
-    const requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow"
-    };
 
-    fetch("http://127.0.0.1:2442/login", requestOptions)
-        .then((response) => response.text())
-        .then((result) => console.log(result))
-        .catch((error) => console.error(error));
+
+
+
     // !
 
     const [courseInfo, setCourseInfo] = useState("");

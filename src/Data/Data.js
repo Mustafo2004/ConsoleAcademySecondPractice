@@ -515,18 +515,20 @@ export const CoursesPage = [
           position: "Front-End Junior Developer",
         },
       ],
-      sullabus:[
+      sullabus: [
         {
-          id:"1",
-          title:"Module",
-          description:"Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum hac ipsum pharetra finibus erat mattis nec dis quam. Sapien"
+          id: "1",
+          title: "Module",
+          description:
+            "Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum hac ipsum pharetra finibus erat mattis nec dis quam. Sapien",
         },
         {
-          id:"2",
-          title:"Module",
-          description:"Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum hac ipsum pharetra finibus erat mattis nec dis quam. Sapien"
+          id: "2",
+          title: "Module",
+          description:
+            "Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum hac ipsum pharetra finibus erat mattis nec dis quam. Sapien",
         },
-      ]
+      ],
     },
     ru: {
       aboutCourse:
@@ -544,6 +546,25 @@ export const CoursesPage = [
       price: "3000 TJS",
       duration: "3 месяца",
       // !
+    },
+  },
+];
+
+export const Project = [
+  {
+    id: "1",
+    image: projectsImage1,
+    en: {
+      title: "Coder Camp",
+      description:
+        "Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum hac ipsum pharetra finibus erat mattis nec dis quam. Sapien quisque quisque faucibus scelerisque, mus bibendum. Phasellus vehicula gravida blandit eleifend quisque maximus lectus in. Morbi posuere gravida erat dignissim, dapibus vulputate pretium. Tortor integer venenatis litora netus montes at hac curae. Natoque imperdiet molestie neque class laoreet mauris semper. Tortor bibendum senectus egestas leo morbi sagittis enim cursus. Lacus conubia elit ornare turpis quam est mi.",
+      date: "13 June 2023г.",
+    },
+    ru: {
+      title: "Coder Camp",
+      description:
+        "Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum hac ipsum pharetra finibus erat mattis nec dis quam. Sapien quisque quisque faucibus scelerisque, mus bibendum. Phasellus vehicula gravida blandit eleifend quisque maximus lectus in. Morbi posuere gravida erat dignissim, dapibus vulputate pretium. Tortor integer venenatis litora netus montes at hac curae. Natoque imperdiet molestie neque class laoreet mauris semper. Tortor bibendum senectus egestas leo morbi sagittis enim cursus. Lacus conubia elit ornare turpis quam est mi.",
+      date: "13 Июля 2023г.",
     },
   },
 ];
