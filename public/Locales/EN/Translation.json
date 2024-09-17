@@ -1,0 +1,45 @@
+{
+    "Header": {
+        "home": "Home",
+        "courses": "Courses",
+        "about": "About",
+        "team": "Team",
+        "projects": "Projects"
+    },
+    "Button": {
+        "header": "Start Training",
+        "more": "More",
+        "all": "All courses",
+        "send":"Send"
+    },
+    "Title": {
+        "populatTitle": "Popular courses",
+        "courses": "Courses",
+        "graduates": "Graduates",
+        "Faq": "Frequently asked questions",
+        "about": "About Us",
+        "mission": "Mission and values",
+        "creating": "How do we create Console?",
+        "team": "Team",
+        "projects": "Projects",
+        "approach": "Our approach to education",
+        "partner": "Parnter",
+        "aboutcourse": "Abour course",
+        "courseadvanages": "Advantages",
+        "forwhomthiscourse": "Для кого подходит этот курс? ",
+        "teachers": "Who will teach?",
+        "popularCourses": "Popular courses",
+        "creatingProject": "Start creating projects together"
+    },
+    "FilterCourses": {
+        "all": "All ",
+        "children": "Children",
+        "teenagers": "Tennager",
+        "adult": "Adult",
+        "corporate": "Corporate"
+    },
+    "InputTitle": {
+        "information_about_you": "Information about you*",
+        "information_about_parents": "Information about your parent’s *"
+    }
+}

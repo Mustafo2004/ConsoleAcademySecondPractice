@@ -1,0 +1,14 @@
+/* FaqList.module.css */
+.accordionDetails {
+    transition: height 0.8s ease;
+    overflow: hidden;
+  }
+  
+  .iconRotate {
+    transition: transform 0.8s ease;
+  }
+  
+  .iconRotateExpanded {
+    transform: rotate(180deg); /* Rotate the icon when expanded */
+  }
+  

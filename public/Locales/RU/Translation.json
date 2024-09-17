@@ -1,0 +1,45 @@
+{
+    "Header": {
+        "home": "Главная",
+        "courses": "Курсы",
+        "about": "О нас",
+        "team": "Команда",
+        "projects": "Проекты"
+    },
+    "Button": {
+        "header": "Начать обучение",
+        "more": "Подробнее",
+        "all": "Все курсы",
+        "send": "Send"
+    },
+    "Title": {
+        "populatTitle": "Популярные курсы",
+        "courses": "Курсы",
+        "graduates": "Выпускники",
+        "Faq": "Часто задаваемые вопросы",
+        "about": "О нас",
+        "mission": "Миссия и ценности",
+        "creating": "Как мы создаём Console? ",
+        "team": "Команда",
+        "projects": "Проекты",
+        "approach": "Наш подход к образованию",
+        "partner": "Партнёры",
+        "aboutcourse": "О курсе",
+        "courseadvanages": "Преимущества ",
+        "forwhomthiscourse": "Для кого подходит этот курс? ",
+        "teachers": "Кто будет преподавать?",
+        "popularCourses": "Популярные курсы",
+        "creatingProject": "Начать совместный проект"
+    },
+    "FilterCourses": {
+        "all": "Все",
+        "children": "Дети",
+        "teenagers": "Подростки",
+        "adult": "Молодёжь",
+        "corporate": "Корпоратив"
+    },
+    "InputTitle": {
+        "information_about_you": "Информация о вас*",
+        "information_about_parents": "Информация о ваших родителях *"
+    }
+}
